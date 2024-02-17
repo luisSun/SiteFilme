@@ -1,0 +1,61 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="/css/article.css">
+</head>
+<body>
+    <div id="container">
+        <header><%- include('partials/navbar.ejs') %>
+        </header>
+        
+        <div class="content-wrapper">
+            <main>
+                Main
+                <div class="article-main">
+                    <div class="article-head">
+                        <h2>Filmes </h2>
+                    </div>
+                    <div class="article-body">
+                        <div class="" id="body-artigo">
+                            <div class="episodios">
+                            <!-- Adicionar o EJS de iteração-->
+                            <% for (let i = 0; i < result.length; i++) { %>
+                                <li></li>
+                            <!-- FIM Adicionar o EJS de iteração-->
+                            <% } %>
+                            </div>
+                    </div>
+                </div>
+            </main>
+            <aside>Aside
+                <div class="aside-main">
+                    
+                <ul>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                </ul>
+                </div>
+            </aside>
+        </div>
+        
+        <footer>Footer
+            <script src="script/script.js"></script>
+        </footer>
+    </div>
+</body>
+</html>

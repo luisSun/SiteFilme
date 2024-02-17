@@ -1,8 +1,15 @@
+
+.article-main{
+    background-color: aqua;
+    padding: 0px;
+    width: 800px;
+    margin-bottom: 15px;
+}
 .article-head{
     background-color: red;
     padding: 10px;
 }
 
-.artig-body{
+.article-body{
     background-color: yellow;
 }

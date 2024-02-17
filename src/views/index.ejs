@@ -1,0 +1,90 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="/css/article.css">
+</head>
+<body>
+    <div id="container">
+        <header><%- include('partials/navbar.ejs') %>
+        </header>
+        
+        <div class="content-wrapper">
+            <main>
+                Main
+                <div class="article-main">
+                    <div class="article-head">
+                        <h2>Filmes </h2>
+                    </div>
+                    <div class="article-body">
+                        <div class="card-container" id="body-artigo">
+                            <!-- Adicionar o EJS de iteração-->
+                            <% for (let i = 0; i < resulFilms.length; i++) { %>
+                            <div class="card">
+                                <div class="card-content">
+                                    <a href="">
+                                        <img class="img-thumbnail" src="<%= resulFilms[i].cover %>">
+                                    </a>
+                                    <div class="orange-field"><%= resulFilms[i].title %></div>
+                                </div>
+                            </div>
+                            <!-- FIM Adicionar o EJS de iteração-->
+                            <% } %>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="article-main">
+                    <div class="article-head">
+                        <h2>Series </h2>
+                    </div>
+                    <div class="article-body">
+                        <div class="card-container" id="body-artigo">
+                            <!-- Adicionar o EJS de iteração-->
+                            <% for (let i = 0; i < resultSeries.length; i++) { %>
+                            <div class="card">
+                                <div class="card-content">
+                                    <a href="">
+                                        <img class="img-thumbnail" src="<%= resultSeries[i].cover %>">
+                                    </a>
+                                    <div class="orange-field2"><%= resultSeries[i].title %></div>
+                                    <div class="orange-field3"><%= resultSeries[i].season %></div>
+                                </div>
+                            </div>
+                            <!-- FIM Adicionar o EJS de iteração-->
+                            <% } %>
+                          </div>
+                    </div>
+                </div>
+            </main>
+            <aside>Aside
+                <div class="aside-main">
+                    
+                <ul>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                </ul>
+                </div>
+            </aside>
+        </div>
+        
+        <footer>Footer
+            <script src="script/script.js"></script>
+        </footer>
+    </div>
+</body>
+</html>

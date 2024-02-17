@@ -1,0 +1,75 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="/css/article.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <%- include('partials/navbar.ejs') %>
+        </header>
+        
+        <div class="content-wrapper">
+            <main>
+
+                <div class="article-head">
+                    <h4>Head do artigo <%= resulFilms ? resulFilms.title : 'ID NAO ENCONTRADO!' %></h4>
+                </div>
+                <div id="filmes" class="artig-body">
+                    <div class="campo-vid">
+                        <% if (resulFilms) { %>
+                            <div class="video-container">
+                                <video class="midia-vid" width="640" height="360" controls poster="<%= resulFilms.cover %>" muted>
+                                    <source src="#" type="video/mp4">
+                                    Seu navegador não suporta o elemento de vídeo.
+                                </video> 
+                            </div>                   
+                            <ul class="descricao-midia">
+                                <br>
+                                <li class="titulo-li">Codigo: <a href="#" alt="Codigo" class="titulo-lia"><%= resulFilms.imdbcod %></a></li>
+                                <li class="titulo-li">Titulo: <a href="#" alt="Link studios" class="titulo-lia"><%= resulFilms.title %></a></li>
+                                <li class="titulo-li">Studio: <a href="#" alt="Link studios"class="titulo-lia"><%= resulFilms.diretor %></a></li>
+                                <li class="titulo-li">Atriz: <a href="#" alt="Link atriz" class="titulo-lia"><%= resulFilms.ano %></a></li>
+                                <li class="titulo-li">Tags:
+                                    <div class="tags-container">
+                                        <button class="tag-button"></button>
+                                    </div>
+                                  </li>
+                                <br>
+                              </ul>
+                        <% } else { %>
+                            <p>Nenhum item encontrado com o ID fornecido.</p>
+                        <% } %>
+                    </div>                
+                </div>
+            </main>
+            <aside>Aside
+                <div class="aside-main">
+                    <ul>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                        <li>Link Home</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <footer>Footer
+            <script src="script/script.js"></script>
+        </footer>
+    </div>
+</body>
+</html>

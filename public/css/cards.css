@@ -7,8 +7,8 @@
 }
 
 .card {
-    width: 100px; /* Reduzindo o tamanho do card */
-    margin: 3px; /* Reduzindo o espaço entre os cards */
+    width: 50px; /* Reduzindo o tamanho do card */
+    margin: 2px; /* Reduzindo o espaço entre os cards */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -26,6 +26,29 @@
 }
 
 .orange-field {
+    border: #fff;
+    position: absolute;
+    bottom: 15px; /* Subindo o título orange mais próximo da imagem */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do campo laranja com transparência */
+    color: #fff; /* Cor do texto no campo laranja */
+    padding: 5px 10px;
+}
+.orange-field2 {
+    border: #fff;
+    position: absolute;
+    bottom: 35px; /* Subindo o título orange mais próximo da imagem */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do campo laranja com transparência */
+    color: #fff; /* Cor do texto no campo laranja */
+    padding: 5px 10px;
+}
+
+.orange-field3 {
     border: #fff;
     position: absolute;
     bottom: 15px; /* Subindo o título orange mais próximo da imagem */
