@@ -16,9 +16,7 @@ function executeQuery(sql, values) {
         reject(error);
       } else {
         resolve(results);
-        
       }
-      console.log('Conectado Mysql!')
     });
   });
 }

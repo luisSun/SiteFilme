@@ -17,11 +17,6 @@ app.use('/', homeRouter);
 app.use('/', filmesRouter);
 app.use('/', seriesRouter);
 
-// Rota para renderizar o template
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
 // Iniciando o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

@@ -28,7 +28,7 @@
                             <% for (let i = 0; i < resulFilms.length; i++) { %>
                             <div class="card">
                                 <div class="card-content">
-                                    <a href="">
+                                    <a href="/filmes/<%= resulFilms[i].imdb_cod %>">
                                         <img class="img-thumbnail" src="<%= resulFilms[i].cover %>">
                                     </a>
                                     <div class="orange-field"><%= resulFilms[i].title %></div>

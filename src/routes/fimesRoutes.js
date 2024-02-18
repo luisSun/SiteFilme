@@ -3,7 +3,6 @@ const router = express.Router();
 const { executeQuery } = require('../db/db');
 
 
-
 router.get('/filmes', async (req, res) => {
     const [result] = await Promise.all([
         executeQuery('SELECT * FROM filmes_teste ORDER BY id',),
@@ -26,7 +25,6 @@ router.get('/filmes/:index', async (req, res) => {
         }
 
         const valores = ['Filmes', 'filmes'];
-        console.log(resulFilms);
         res.status(200).render('watch', { resulFilms: resulFilms[0], valores: valores });
     } catch (err) {
         console.error('Erro ao buscar item:', err);
