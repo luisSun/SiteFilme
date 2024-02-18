@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.poster-ep{
+    background-color: green;
+    margin: 10px;
+    padding: 20px;
+}
+
+.info-ep{
+    background-color: salmon;
+}
+
+.info-ep {
+    display: flex;
+}
+
+.poster-card {
+    flex: 1; /* Ocupa todo o espaço disponível */
+}
+
+.descr-serie {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    margin-left: 10px; /* Adiciona um espaço entre os elementos */
+}
+
+
+.list-ep{
+    text-align: left;
+    background-color: blue;
+}
+
+.list-ep-ul li{
+    list-style-type: none; text-align: left;
+}

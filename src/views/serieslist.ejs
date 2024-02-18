@@ -1,61 +1,52 @@
-<!-- views/index.ejs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/cards.css">
-    <link rel="stylesheet" href="/css/article.css">
-</head>
-<body>
-    <div id="container">
-        <header><%- include('partials/navbar.ejs') %>
-        </header>
+<!-- views/filmsindex.ejs -->
+<%- include('partials/head.ejs') %>
+<!-- Div Container -->
         
         <div class="content-wrapper">
             <main>
                 Main
                 <div class="article-main">
                     <div class="article-head">
-                        <h2>Filmes </h2>
+                        <h2>Series:  </h2>
                     </div>
                     <div class="article-body">
-                        <div class="" id="body-artigo">
-                            <div class="episodios">
-                            <!-- Adicionar o EJS de iteração-->
-                            <% for (let i = 0; i < result.length; i++) { %>
-                                <li></li>
-                            <!-- FIM Adicionar o EJS de iteração-->
-                            <% } %>
+                        <div class="poster-ep" id="body-artigo">
+                            <div class="info-ep">
+                                <div class="poster-card">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNWU5YmJhNWEtZGVlOS00NmRhLThmNzUtYjAyMDA2MDg5ZTM4XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_QL75_UY281_CR5,0,190,281_.jpg" alt="">
+                                </div>
+                                <div class="descr-serie">
+                                    <ul>
+                                        <li>Ator:</li>
+                                        <li>Studio:</li>
+                                        <li>Descr</li>
+                                        <li>tags</li>
+                                    </ul>
+                                </div>
                             </div>
+                            <!-- Adicionar o EJS de iteração-->
+                                <div class="list-ep">
+                                    <div class="list-ep">
+                                        <!-- Adicionar o EJS de iteração-->
+                                        <% let i = 0; %>
+                                        <% while (i < resulFilms.length) { %>
+                                            <% let currentSeason = resulFilms[i].Season; %>
+                                            <h3>Season <%= currentSeason %></h3> <!-- Título da temporada -->
+                                            <ul> <!-- Inicia a lista de episódios da temporada -->
+                                            <% while (i < resulFilms.length && resulFilms[i].Season === currentSeason) { %>
+                                                <li><%= resulFilms[i].title %></li> <!-- Título do episódio -->
+                                                <% i++; %>
+                                            <% } %>
+                                            </ul> <!-- Fecha a lista de episódios da temporada -->
+                                        <% } %>
+                                        <!-- FIM Adicionar o EJS de iteração-->
+                                    </div>
+                                    
+                          </div>
                     </div>
                 </div>
             </main>
-            <aside>Aside
-                <div class="aside-main">
-                    
-                <ul>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                    <li>Link Home</li>
-                </ul>
-                </div>
-            </aside>
-        </div>
-        
-        <footer>Footer
-            <script src="script/script.js"></script>
-        </footer>
-    </div>
-</body>
-</html>
+
+<!-- views/adidebidyend.ejs -->
+<%- include('partials/adidebidyend.ejs') %>
+<!-- Div Container -->
