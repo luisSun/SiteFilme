@@ -8,7 +8,8 @@ router.get(['/','/main','/home'], async (req, res) => {
         executeQuery('SELECT * FROM filmes_teste ORDER BY id limit 4',),
         executeQuery('SELECT * FROM series_teste ORDER BY id limit 4',),
     ]);
-    res.status(200).render('index', { resulFilms: resulFilms, resultSeries: resultSeries});
+    const valor= ['filmes', 'serie']
+    res.status(200).render('index', { resulFilms: resulFilms, resultSeries: resultSeries, valor: valor});
 });
 
 

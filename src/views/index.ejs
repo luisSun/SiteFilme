@@ -15,7 +15,8 @@
                             <% for (let i = 0; i < resulFilms.length; i++) { %>
                             <div class="card">
                                 <div class="card-content">
-                                    <a href="/filmes/<%= resulFilms[i].imdb_cod %>">
+                                    <% const baseUrl = valor[0] + '/'; %>
+                                    <a href="<%=  baseUrl + resulFilms[i].imdb_cod %>">
                                         <img class="img-thumbnail" src="<%= resulFilms[i].cover %>">
                                     </a>
                                     <div class="orange-field"><%= resulFilms[i].title %></div>
@@ -37,7 +38,8 @@
                             <% for (let i = 0; i < resultSeries.length; i++) { %>
                             <div class="card">
                                 <div class="card-content">
-                                    <a href="">
+                                    <% const baseUrl = valor[1] + '/'; %>
+                                    <a href="<%= baseUrl + resultSeries[i].imdb_cod %>">
                                         <img class="img-thumbnail" src="<%= resultSeries[i].cover %>">
                                     </a>
                                     <div class="orange-field2"><%= resultSeries[i].title %></div>

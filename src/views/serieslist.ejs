@@ -13,7 +13,7 @@
                         <div class="poster-ep" id="body-artigo">
                             <div class="info-ep">
                                 <div class="poster-card">
-                                    <img src="https://m.media-amazon.com/images/M/MV5BNWU5YmJhNWEtZGVlOS00NmRhLThmNzUtYjAyMDA2MDg5ZTM4XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_QL75_UY281_CR5,0,190,281_.jpg" alt="">
+                                    <img src="<%= coverPath %>" alt="">
                                 </div>
                                 <div class="descr-serie">
                                     <ul>
@@ -25,7 +25,6 @@
                                 </div>
                             </div>
                             <!-- Adicionar o EJS de iteração-->
-                                <div class="list-ep">
                                     <div class="list-ep">
                                         <!-- Adicionar o EJS de iteração-->
                                         <% let i = 0; %>
@@ -34,15 +33,13 @@
                                             <h3>Season <%= currentSeason %></h3> <!-- Título da temporada -->
                                             <ul> <!-- Inicia a lista de episódios da temporada -->
                                             <% while (i < resulFilms.length && resulFilms[i].Season === currentSeason) { %>
-                                                <li><%= resulFilms[i].title %></li> <!-- Título do episódio -->
+                                                <a href="#"><li><%= resulFilms[i].title %></li></a> <!-- Título do episódio -->
                                                 <% i++; %>
                                             <% } %>
                                             </ul> <!-- Fecha a lista de episódios da temporada -->
                                         <% } %>
                                         <!-- FIM Adicionar o EJS de iteração-->
                                     </div>
-                                    
-                          </div>
                     </div>
                 </div>
             </main>

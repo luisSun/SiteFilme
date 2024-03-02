@@ -9,29 +9,55 @@
     padding: 20px;
 }
 
-.info-ep{
-    background-color: salmon;
-}
-
 .info-ep {
     display: flex;
+    background-color: salmon;
 }
 
 .poster-card {
     flex: 1; /* Ocupa todo o espaço disponível */
+    max-width: 30%; /* Define a largura máxima como 30% do espaço disponível */
 }
 
 .descr-serie {
-    flex: 1; /* Ocupa todo o espaço disponível */
-    margin-left: 10px; /* Adiciona um espaço entre os elementos */
+    flex: 2; /* Ocupa o dobro do espaço do poster-card */
+    min-width: 70%; /* Define a largura mínima como 70% do espaço disponível */
+    padding-left: 10px;
+    background-color: blueviolet;
 }
-
 
 .list-ep{
     text-align: left;
     background-color: blue;
 }
 
-.list-ep-ul li{
+.list-ep li{
     list-style-type: none; text-align: left;
+    background-color: yellowgreen;
+    border: 1px solid #000;
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {    
+.article-main{
+        width: 100%;
+    }
+
+.poster-ep{
+    justify-content: center;
+    padding: 0px;
+}
+.info-ep {
+    flex-direction: column; /* Altera a direção do flex para coluna */
+}
+
+.poster-card, .descr-serie {
+    flex: 1; /* Ambos os elementos ocupam o mesmo espaço */
+    max-width: 100%; /* Ambos os elementos ocupam a largura total */
+    margin-bottom: 10px;
+}
+
+.list-ep li {
+    width: 100%; /* As listas ocupam a largura total */
+}
 }
