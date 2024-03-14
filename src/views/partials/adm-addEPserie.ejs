@@ -1,0 +1,36 @@
+<h3>Adicionar Episodios</h3>
+<form action="/addEpSerie" method="POST">
+
+    <label for="series_id">Selecione a série:</label>
+    <select name="series_id" id="series_id">
+        <% resulSeries.forEach(serie => { %>
+            <option value="<%= serie.id %>"><%= serie.title %></option>
+        <% }); %>
+    </select>
+    
+    <label for="nr_episode">Episódio:</label>
+    <input type="number" id="nr_episode" name="nr_episode" min="1" max="3000" required><br><br>
+    
+    <label for="season">Temporada:</label>
+    <input type="number" id="season" name="season" min="1" max="100" required><br><br>
+    
+    <label for="title">Título:</label>
+    <input type="text" id="title" name="title" maxlength="200" required><br><br>
+    
+    <label for="descricao">Descrição:</label><br>
+    <textarea id="descricao" name="descricao" maxlength="250" required></textarea><br><br>
+    
+    <label for="midia">Mídia:</label>
+    <input type="text" id="midia" name="midia" maxlength="300" required><br><br>
+    
+    <label for="formato">Formato:</label>
+    <select id="formato" name="formato">
+        <option value=".mp4">MP4</option>
+        <option value=".avi">AVI</option>
+        <option value=".mkv">MKV</option>
+        <option value=".wmv">WMV</option>
+    </select><br><br>
+    
+    <button type="submit">Adicionar</button>
+    <button type="button" onclick="resetForm()">Limpar</button>
+</form>

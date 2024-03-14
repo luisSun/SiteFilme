@@ -7,8 +7,7 @@
 }
 
 .card {
-    width: 185px; /* Reduzindo o tamanho do card */
-    height: 290px;
+    width: 50px; /* Reduzindo o tamanho do card */
     margin: 2px; /* Reduzindo o espaço entre os cards */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,15 +16,13 @@
 }
 
 .card-content {
-    width: 100%;
-    height: 100%;
     position: relative;
 }
 
 .card-content img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
 }
 
 .orange-field {
@@ -93,7 +90,7 @@
 /* CSS para dispositivos menores ou iguais a 768px (mobile) */
 @media only screen and (max-width: 768px) {
     .card {
-        width: calc(35% - 10px); /* Reduzindo o tamanho do card para mostrar 2 cartões por linha */
+        width: calc(50% - 10px); /* Reduzindo o tamanho do card para mostrar 2 cartões por linha */
     }
 
     .card-title {

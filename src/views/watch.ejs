@@ -12,19 +12,19 @@
                     <div class="article-body">
                         <div class="card-container" id="body-artigo">
                             <div class="campo-vid">
-                                <% if (resulFilms) { %>
+                            <% if (resulFilms) { %>
                             <div class="video-container">
                                 <video class="midia-vid" width="640" height="360" controls poster="<%= resulFilms.cover %>" muted>
-                                    <source src="#" type="video/mp4">
+                                    <source src="/media/<%= resulFilms.midia %>" type="video/mp4">
                                     Seu navegador não suporta o elemento de vídeo.
                                 </video> 
                             </div>                   
                             <ul class="descricao-midia">
                                 <br>
-                                <li class="titulo-li">Codigo: <a href="#" alt="Codigo" class="titulo-lia"><%= resulFilms.imdbcod %></a></li>
-                                <li class="titulo-li">Titulo: <a href="#" alt="Link studios" class="titulo-lia"><%= resulFilms.title %></a></li>
-                                <li class="titulo-li">Studio: <a href="#" alt="Link studios"class="titulo-lia"><%= resulFilms.diretor %></a></li>
-                                <li class="titulo-li">Atriz: <a href="#" alt="Link atriz" class="titulo-lia"><%= resulFilms.ano %></a></li>
+                                <li class="titulo-li">Codigo: <a href="#" alt="Codigo" class="titulo-lia"></a></li>
+                                <li class="titulo-li">Titulo: <a href="#" alt="Link studios" class="titulo-lia"></a></li>
+                                <li class="titulo-li">Studio: <a href="#" alt="Link studios"class="titulo-lia"></a></li>
+                                <li class="titulo-li">Atriz: <a href="#" alt="Link atriz" class="titulo-lia"></a></li>
                                 <li class="titulo-li">Tags:
                                     <div class="tags-container">
                                         <button class="tag-button"></button>

@@ -1,0 +1,72 @@
+/* CSS para layout padrão */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav-links li {
+    margin-right: 10px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+/* CSS para dispositivos móveis */
+/* CSS para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1; /* Certifica-se de que o menu está na parte superior */
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        order: -1; /* Move o ícone do menu para o início do flex container */
+    }
+
+    .search-box {
+        order: 1; /* Move a barra de pesquisa para o final do flex container */
+    }
+}
