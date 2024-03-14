@@ -17,9 +17,9 @@
                                 </div>
                                 <div class="descr-serie">
                                     <ul>
-                                        <li>Ator:</li>
-                                        <li>Studio:</li>
-                                        <li>Descr</li>
+                                        <li>Ator: </li>
+                                        <li>Studio: </li>
+                                        <li>Descrição:<%= desc.descricao %></li>
                                         <li>tags</li>
                                     </ul>
                                 </div>
@@ -33,7 +33,7 @@
                                             <h3>Season <%= currentSeason %></h3> <!-- Título da temporada -->
                                             <ul> <!-- Inicia a lista de episódios da temporada -->
                                             <% while (i < resulFilms.length && resulFilms[i].Season === currentSeason) { %>
-                                                <a href="#"><li><%= resulFilms[i].title %></li></a> <!-- Título do episódio -->
+                                                <a href="/serie/watch/<%= resulFilms[i].id %>"><li class="list-episodes">Season <%= resulFilms[i].season %> Episode <%= resulFilms[i].episodio %> - <%= resulFilms[i].title %></li></a> <!-- Título do episódio -->
                                                 <% i++; %>
                                             <% } %>
                                             </ul> <!-- Fecha a lista de episódios da temporada -->

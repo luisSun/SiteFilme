@@ -1,0 +1,82 @@
+<!-- views/filmsindex.ejs -->
+<%- include('partials/head.ejs') %>
+<!-- Div Container -->
+        
+        <div class="content-wrapper">
+            <main>
+                Main
+                <div class="article-main">
+                    <div class="article-head">
+                        <h2>Adm Ferramantas</h2>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-body form-addserie">
+
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+            </main>
+            <aside>Aside
+                <div class="aside-main">
+                    
+                <ul>
+                        <li id="filmes">AddFilmes</li>
+                    <ul>
+                        <li id="addSerie">ADD Series</li>
+                        <li id="addEpSerie">ADD novos Episodios</li>
+                    </ul>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                    <li>Link Home</li>
+                </ul>
+                </div>
+            </aside>
+        </div>
+        
+        <footer>Footer
+            <script src="script/script.js"></script>
+        </footer>
+    </div>
+    <script>
+        // script.js
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const addSerieItem = document.getElementById('addSerie');
+    const addEpSerieItem = document.getElementById('addEpSerie');
+    const formAddSerie = document.querySelector('.form-addserie');
+
+    addSerieItem.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/adm-addserie');
+            const html = await response.text();
+            formAddSerie.innerHTML = html;
+        } catch (error) {
+            console.error(error);
+        }
+    });
+
+    addEpSerieItem.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/adm-addepisodio');
+            const html = await response.text();
+            formAddSerie.innerHTML = html;
+        } catch (error) {
+            console.error(error);
+        }
+    });
+});
+
+        /////
+        function resetForm() {
+            document.getElementById("serieForm").reset();
+        }
+    </script>
+</body>
+</html>
